@@ -27,7 +27,7 @@ dependencies:
     git:
       url: https://github.com/ibrahimMahfuz/flutterlocation.git
       path: packages/location_platform_interface
-      ref: 5.0.3-non-null-safety.3
+      ref: 5.0.3-non-null-safety.4
 
 dev_dependencies:
   async: ^2.5.0
