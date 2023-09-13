@@ -40,9 +40,9 @@ class LocationPlatform extends PlatformInterface {
   /// [LocationData]. The [interval] and [distanceFilter] are controlling how
   /// often a new location is sent through [onLocationChanged].
   Future<bool> changeSettings({
-    LocationAccuracy? accuracy,
-    int? interval,
-    double? distanceFilter,
+    LocationAccuracy accuracy,
+    int interval,
+    double distanceFilter,
   }) {
     throw UnimplementedError();
   }
@@ -53,7 +53,7 @@ class LocationPlatform extends PlatformInterface {
   }
 
   /// Enables or disables service in the background mode.
-  Future<bool> enableBackgroundMode({bool? enable}) {
+  Future<bool> enableBackgroundMode({bool enable}) {
     throw UnimplementedError();
   }
 
@@ -125,14 +125,14 @@ class LocationPlatform extends PlatformInterface {
   ///
   /// For Android SDK versions above 25, uses [channelName] for the
   /// [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel).
-  Future<AndroidNotificationData?> changeNotificationOptions({
-    String? channelName,
-    String? title,
-    String? iconName,
-    String? subtitle,
-    String? description,
-    Color? color,
-    bool? onTapBringToFront,
+  Future<AndroidNotificationData> changeNotificationOptions({
+    String channelName,
+    String title,
+    String iconName,
+    String subtitle,
+    String description,
+    Color color,
+    bool onTapBringToFront,
   }) {
     throw UnimplementedError();
   }

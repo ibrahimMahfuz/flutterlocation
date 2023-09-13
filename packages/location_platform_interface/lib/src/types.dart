@@ -23,93 +23,93 @@ class LocationData {
   /// Creates a new [LocationData] instance from a map.
   factory LocationData.fromMap(Map<String, dynamic> dataMap) {
     return LocationData._(
-      dataMap['latitude'] as double?,
-      dataMap['longitude'] as double?,
-      dataMap['accuracy'] as double?,
-      dataMap['altitude'] as double?,
-      dataMap['speed'] as double?,
-      dataMap['speed_accuracy'] as double?,
-      dataMap['heading'] as double?,
-      dataMap['time'] as double?,
+      dataMap['latitude'] as double,
+      dataMap['longitude'] as double,
+      dataMap['accuracy'] as double,
+      dataMap['altitude'] as double,
+      dataMap['speed'] as double,
+      dataMap['speed_accuracy'] as double,
+      dataMap['heading'] as double,
+      dataMap['time'] as double,
       dataMap['isMock'] == 1,
-      dataMap['verticalAccuracy'] as double?,
-      dataMap['headingAccuracy'] as double?,
-      dataMap['elapsedRealtimeNanos'] as double?,
-      dataMap['elapsedRealtimeUncertaintyNanos'] as double?,
-      dataMap['satelliteNumber'] as int?,
-      dataMap['provider'] as String?,
+      dataMap['verticalAccuracy'] as double,
+      dataMap['headingAccuracy'] as double,
+      dataMap['elapsedRealtimeNanos'] as double,
+      dataMap['elapsedRealtimeUncertaintyNanos'] as double,
+      dataMap['satelliteNumber'] as int,
+      dataMap['provider'] as String,
     );
   }
 
   /// Latitude in degrees
-  final double? latitude;
+  final double latitude;
 
   /// Longitude, in degrees
-  final double? longitude;
+  final double longitude;
 
   /// Estimated horizontal accuracy of this location, radial, in meters
   ///
   /// Will be null if not available.
-  final double? accuracy;
+  final double accuracy;
 
   /// Estimated vertical accuracy of altitude, in meters.
   ///
   /// Will be null if not available.
-  final double? verticalAccuracy;
+  final double verticalAccuracy;
 
   /// In meters above the WGS 84 reference ellipsoid. Derived from GPS informations.
   ///
   /// Will be null if not available.
-  final double? altitude;
+  final double altitude;
 
   /// In meters/second
   ///
   /// Will be null if not available.
-  final double? speed;
+  final double speed;
 
   /// In meters/second
   ///
   /// Will be null if not available.
   /// Not available on web
-  final double? speedAccuracy;
+  final double speedAccuracy;
 
   /// Heading is the horizontal direction of travel of this device, in degrees
   ///
   /// Will be null if not available.
-  final double? heading;
+  final double heading;
 
   /// timestamp of the LocationData
-  final double? time;
+  final double time;
 
   /// Is the location currently mocked
   ///
   /// Always false on iOS
-  final bool? isMock;
+  final bool isMock;
 
   /// Get the estimated bearing accuracy of this location, in degrees.
   /// Only available on Android
   /// https://developer.android.com/reference/android/location/Location#getBearingAccuracyDegrees()
-  final double? headingAccuracy;
+  final double headingAccuracy;
 
   /// Return the time of this fix, in elapsed real-time since system boot.
   /// Only available on Android
   /// https://developer.android.com/reference/android/location/Location#getElapsedRealtimeNanos()
-  final double? elapsedRealtimeNanos;
+  final double elapsedRealtimeNanos;
 
   /// Get estimate of the relative precision of the alignment of the ElapsedRealtimeNanos timestamp.
   /// Only available on Android
   /// https://developer.android.com/reference/android/location/Location#getElapsedRealtimeUncertaintyNanos()
-  final double? elapsedRealtimeUncertaintyNanos;
+  final double elapsedRealtimeUncertaintyNanos;
 
   /// The number of satellites used to derive the fix.
   /// Only available on Android
   /// https://developer.android.com/reference/android/location/Location#getExtras()
-  final int? satelliteNumber;
+  final int satelliteNumber;
 
   /// The name of the provider that generated this fix.
   /// Only available on Android
   /// https://developer.android.com/reference/android/location/Location#getProvider()
-  final String? provider;
+  final String provider;
 
   @override
   String toString() =>

@@ -28,9 +28,9 @@ class Location implements LocationPlatform {
   /// [interval] and [distanceFilter] are not used on web.
   @override
   Future<bool> changeSettings({
-    LocationAccuracy? accuracy = LocationAccuracy.high,
-    int? interval = 1000,
-    double? distanceFilter = 0,
+    LocationAccuracy accuracy = LocationAccuracy.high,
+    int interval = 1000,
+    double distanceFilter = 0,
   }) {
     return LocationPlatform.instance.changeSettings(
       accuracy: accuracy,
@@ -47,7 +47,7 @@ class Location implements LocationPlatform {
 
   /// Enables or disables service in the background mode.
   @override
-  Future<bool> enableBackgroundMode({bool? enable = true}) {
+  Future<bool> enableBackgroundMode({bool enable = true}) {
     return LocationPlatform.instance.enableBackgroundMode(enable: enable);
   }
 
@@ -123,14 +123,14 @@ class Location implements LocationPlatform {
   /// For Android SDK versions above 25, uses [channelName] for the
   /// [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel).
   @override
-  Future<AndroidNotificationData?> changeNotificationOptions({
-    String? channelName,
-    String? title,
-    String? iconName,
-    String? subtitle,
-    String? description,
-    Color? color,
-    bool? onTapBringToFront,
+  Future<AndroidNotificationData> changeNotificationOptions({
+    String channelName,
+    String title,
+    String iconName,
+    String subtitle,
+    String description,
+    Color color,
+    bool onTapBringToFront,
   }) {
     return LocationPlatform.instance.changeNotificationOptions(
       channelName: channelName,
